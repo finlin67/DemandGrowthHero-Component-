@@ -1,13 +1,11 @@
+'use client';
+
 import React from 'react';
 import { 
-  Menu, 
   Globe, 
-  Map, 
   Zap, 
   LineChart, 
   Share2,
-  Box,
-  Monitor
 } from 'lucide-react';
 import DemandGrowthTile from './components/DemandGrowthTile';
 

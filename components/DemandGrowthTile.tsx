@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { Search, Banknote, TrendingUp, Rocket } from 'lucide-react';
 
 /**
@@ -10,8 +12,8 @@ import { Search, Banknote, TrendingUp, Rocket } from 'lucide-react';
  * Tech Stack: React, Tailwind CSS, Framer Motion, Lucide React.
  */
 export default function DemandGrowthTile() {
-  // Animation variants
-  const floatAnimation = {
+  // Animation variants with strict typing
+  const floatAnimation: Variants = {
     animate: {
       y: [0, -10, 0],
       transition: {
@@ -22,7 +24,7 @@ export default function DemandGrowthTile() {
     }
   };
 
-  const floatAnimationDelayed = {
+  const floatAnimationDelayed: Variants = {
     animate: {
       y: [0, -12, 0],
       transition: {
@@ -34,7 +36,7 @@ export default function DemandGrowthTile() {
     }
   };
 
-  const pulseGlow = {
+  const pulseGlow: Variants = {
     animate: {
       opacity: [0.3, 0.6, 0.3],
       scale: [1, 1.05, 1],
@@ -46,7 +48,7 @@ export default function DemandGrowthTile() {
     }
   };
 
-  const particleFlow = (delay: number) => ({
+  const particleFlow = (delay: number): Variants => ({
     animate: {
       y: [-20, 280],
       opacity: [0, 1, 0],
